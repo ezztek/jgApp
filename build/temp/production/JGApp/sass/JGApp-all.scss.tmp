@@ -1,6 +1,6 @@
 $app-name:  dynamic( 'JGApp' );
-$image-search-path: 'C:/Users/JMG-Dell/projects/apps/jgapp/cordova/www/resources';
-$theme-name:  dynamic( 'theme-triton' );
+$image-search-path: 'C:/Users/JMG-Dell/projects/apps/jgApp/cordova/www/resources';
+$theme-name:  dynamic( 'theme-neptune' );
 $include-ext-abstractcomponent: dynamic(false);;
 $include-ext-abstractmanager: dynamic(false);;
 $include-ext-abstractplugin: dynamic(false);;
@@ -501,8 +501,6 @@ $include-ext-table-table: dynamic(false);;
 $include-ext-theme-neptune-component: dynamic(true);;
 $include-ext-theme-neptune-toolbar: dynamic(true);;
 $include-ext-theme-neptune-tip-tooltip: dynamic(true);;
-$include-ext-theme-triton-component: dynamic(true);;
-$include-ext-theme-triton-toolbar: dynamic(true);;
 $include-ext-tip-tooltip: dynamic(true);;
 $include-ext-tree-tree: dynamic(false);;
 $include-ext-util-abstractmixedcollection: dynamic(true);;
@@ -629,14 +627,6 @@ $current-resource-root: $theme-neptune-resource-root;
 $relative-image-path-for-uis: $theme-neptune-resource-path;
 @import '../../../../../ext/modern/theme-neptune/sass/etc/all';
 
-/* including package theme-triton */
-$theme-triton-resource-root: '' !default;
-$theme-triton-resource-path: 'images' !default;
-$current-package: 'theme-triton';
-$current-resource-root: $theme-triton-resource-root;
-$relative-image-path-for-uis: $theme-triton-resource-path;
-@import '../../../../../ext/modern/theme-triton/sass/etc/all';
-
 /* including package JGApp */
 $JGApp-resource-root: '' !default;
 $JGApp-resource-path: 'images' !default;
@@ -714,29 +704,6 @@ $relative-image-path-for-uis: $theme-neptune-resource-path;
 @import '../../../../../ext/modern/theme-neptune/sass/var/panel/Tool';
 @import '../../../../../ext/modern/theme-neptune/sass/var/tab/Tab';
 @import '../../../../../ext/modern/theme-neptune/sass/var/tab/Bar';
-
-/* including package theme-triton */
-$theme-triton-resource-root: '' !default;
-$theme-triton-resource-path: 'images' !default;
-$current-package: 'theme-triton';
-$current-resource-root: $theme-triton-resource-root;
-$relative-image-path-for-uis: $theme-triton-resource-path;
-@import '../../../../../ext/modern/theme-triton/sass/var/Component';
-@import '../../../../../ext/modern/theme-triton/sass/var/Mask';
-@import '../../../../../ext/modern/theme-triton/sass/var/list/TreeItem';
-@import '../../../../../ext/modern/theme-triton/sass/var/Panel';
-@import '../../../../../ext/modern/theme-triton/sass/var/Button';
-@import '../../../../../ext/modern/theme-triton/sass/var/Toolbar';
-@import '../../../../../ext/modern/theme-triton/sass/var/field/Field';
-@import '../../../../../ext/modern/theme-triton/sass/var/field/Text';
-@import '../../../../../ext/modern/theme-triton/sass/var/MessageBox';
-@import '../../../../../ext/modern/theme-triton/sass/var/dataview/List';
-@import '../../../../../ext/modern/theme-triton/sass/var/tip/ToolTip';
-@import '../../../../../ext/modern/theme-triton/sass/var/picker/Picker';
-@import '../../../../../ext/modern/theme-triton/sass/var/form/FieldSet';
-@import '../../../../../ext/modern/theme-triton/sass/var/grid/column/Column';
-@import '../../../../../ext/modern/theme-triton/sass/var/tab/Tab';
-@import '../../../../../ext/modern/theme-triton/sass/var/tab/Bar';
 
 /* including package JGApp */
 $JGApp-resource-root: '' !default;
@@ -847,12 +814,3 @@ $relative-image-path-for-uis: $theme-neptune-resource-path;
 @import '../../../../../ext/modern/theme-neptune/sass/src/tab/Tab';
 @import '../../../../../ext/modern/theme-neptune/sass/src/tab/Bar';
 @import '../../../../../ext/modern/theme-neptune/sass/src/tab/Panel';
-
-/* including package theme-triton */
-$theme-triton-resource-root: '' !default;
-$theme-triton-resource-path: 'images' !default;
-$current-package: 'theme-triton';
-$current-resource-root: $theme-triton-resource-root;
-$relative-image-path-for-uis: $theme-triton-resource-path;
-@import '../../../../../ext/modern/theme-triton/sass/src/grid/HeaderContainer';
-@import '../../../../../ext/modern/theme-triton/sass/src/grid/Grid';

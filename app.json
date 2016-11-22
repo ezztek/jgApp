@@ -52,7 +52,7 @@
      * The name of the theme for this application.
      */
     
-    "theme": "theme-triton",
+    "theme": "theme-neptune",
     
     
     /**
@@ -426,8 +426,8 @@
                     // Uncomment the line below and add the platforms you wish to build for
                     "platforms": "android",
 
-                    "id": "com.mycdomain.MyApp",
-                    "name": "MyApp"
+                    "id": "com.mycdomain.JGApp",
+                    "name": "JGApp"
                 }
             }
         }

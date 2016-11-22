@@ -14,7 +14,85 @@ Ext.define('JGApp.Application', {
     
     launch: function () {
         // TODO - Launch the application
-    },
+        var str = "Application - Launch called!";        
+        console.log(str);
+        //alert(str);
+
+        var app = {
+            // Application Constructor
+            initialize: function () {
+                document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+                console.log('app.initialize called');
+            },
+
+            deploymentKeyStaging: "KzmiMD1jgcoaOY_WvfHYXaVbv6EVV1CBBKNbG",
+
+            deploymentKeyPROD: "5BcD0J2nrzehZAxtEOS0mIKkacW4V1CBBKNbG",
+
+            // deviceready Event Handler => Bind any cordova events here. Common events are: 'pause', 'resume', etc.
+            onDeviceReady: function () {
+                console.log('app onDeviceReady event called');
+                app.receivedEvent('deviceready');
+                // codePush.sync(null, { updateDialog: true, installMode: InstallMode.IMMEDIATE });                
+                codePush.sync(null, { deploymentKey: app.deploymentKeyStaging, updateDialog: true, installMode: InstallMode.IMMEDIATE });
+                var msg = "Staging key: "+app.deploymentKeyStaging+", Prod: "+app.deploymentKeyPROD;
+                console.log(msg);
+                try{ document.getElementById("divStatus").innerHTML=msg; }
+                catch(e){ console.log('Error: '+e)}; 
+                alert(msg);                                        
+            },
+
+            // Update DOM on a Received Event
+            receivedEvent: function (id) {                
+                console.log('app.receivedEvent called!');
+                var parentElement, listeningElement, receivedElement;
+
+                try{
+                    parentElement = document.getElementById(id);
+                    listeningElement = parentElement.querySelector('.listening');
+                    receivedElement = parentElement.querySelector('.received');
+                    listeningElement.setAttribute('style', 'display:none;');
+                    receivedElement.setAttribute('style', 'display:block;');        
+                }
+                catch(e){
+                    console.log('app.receivedEvent Error: '+e);
+                }                                
+
+                console.log('Received Event: ' + id);
+            }
+            ,UpdateReady: function(update){
+                if (update){ alert("An update is available"); }
+                else{ alert("No updates available"); }        
+            }
+        };// app
+
+        app.initialize();
+
+        // document.getElementById('get-picture').addEventListener('click', getPicture, false);
+        // document.getElementById('take-picture').addEventListener('click', takePicture, false);
+
+        function takePicture(){ getPicture(true); }
+
+        function getPicture(fromCamera){
+            var sType = fromCamera ? Camera.PictureSourceType.Camera : Camera.PictureSourceType.PHOTOLIBRARY;
+            alert("fromCamera: "+fromCamera+", sType: "+sType);   
+            navigator.camera.getPicture(onSuccess, onFail, {
+                quality: 50,    
+                sourceType: fromCamera == true ? Camera.PictureSourceType.Camera : Camera.PictureSourceType.PHOTOLIBRARY,    
+                destinationType: Camera.DestinationType.FILE_URI
+            });
+        }
+
+        function onSuccess(imageURI) {
+            var image = document.getElementById('my-photo');
+            image.src = imageURI;
+        }
+
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+
+    },// launch
 
     onAppUpdate: function () {
         Ext.Msg.confirm('Application Update', 'This application has an update, reload?',

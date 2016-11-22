@@ -31,7 +31,7 @@ Ext.define('JGApp.view.main.Main', {
 
     items: [
         {
-            title: 'Home-JG',
+            title: 'JMG2',
             iconCls: 'x-fa fa-home',
             layout: 'fit',
             // The following grid shares a store with the classic version's grid as well!
@@ -42,7 +42,7 @@ Ext.define('JGApp.view.main.Main', {
             title: 'Users',
             iconCls: 'x-fa fa-user',
             bind: {
-                html: '{loremIpsum}'
+                html: '<div id="divStatus">CURRENT PLACEHOLDER</div><div>{loremIpsum}</div>'
             }
         },{
             title: 'Groups',
@@ -51,7 +51,7 @@ Ext.define('JGApp.view.main.Main', {
                 html: '{loremIpsum}'
             }
         },{
-            title: 'Settings',
+            title: 'Update',
             iconCls: 'x-fa fa-cog',
             bind: {
                 html: '{loremIpsum}'
