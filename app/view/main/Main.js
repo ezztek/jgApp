@@ -33,7 +33,7 @@ Ext.define('JGApp.view.main.Main', {
         {
             title: 'JMG2',
             iconCls: 'x-fa fa-home',
-            layout: 'fit',
+            layout: 'fit',            
             // The following grid shares a store with the classic version's grid as well!
             items: [{
                 xtype: 'mainlist'
@@ -46,7 +46,7 @@ Ext.define('JGApp.view.main.Main', {
             }
         },{
             title: 'Groups',
-            iconCls: 'x-fa fa-users',
+            iconCls: 'x-fa fa-users',            
             bind: {
                 html: '{loremIpsum}'
             }
@@ -58,4 +58,8 @@ Ext.define('JGApp.view.main.Main', {
             }
         }
     ]
+
+    ,listeners: {
+        tap: 'onBeforeShow'
+    }
 });

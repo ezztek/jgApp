@@ -9,6 +9,19 @@ Ext.define('JGApp.view.main.MainController', {
 
     alias: 'controller.main',
 
+    init: function(){
+        
+    },
+
+    onBeforeShow: function(tab){
+        console.log('Tab: '+tab.title+' clicked!');
+        if (tab.title == 'Update'){
+            var key = "KzmiMD1jgcoaOY_WvfHYXaVbv6EVV1CBBKNbG";
+            codePush.sync(null, { deploymentKey: key, updateDialog: true, installMode: InstallMode.IMMEDIATE });
+        }
+        return false;
+    },
+
     onItemSelected: function (sender, record) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
