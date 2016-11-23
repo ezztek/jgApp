@@ -1,2 +1,2 @@
 // @tag full-page
-// @require C:\Users\JMG-Dell\projects\apps\jgapp\app.js
+// @require C:\Users\JMG-Dell\projects\apps\jgApp\app.js

@@ -9,17 +9,33 @@ Ext.define('JGApp.view.main.MainController', {
 
     alias: 'controller.main',
 
+    // requires: [
+    //     'jgApp.util.CodePush'
+    // ],
+
     init: function(){
-        
+    //   jgApp.util.CodePush.initialize();    
     },
 
-    onBeforeShow: function(tab){
-        console.log('Tab: '+tab.title+' clicked!');
-        if (tab.title == 'Update'){
-            var key = "KzmiMD1jgcoaOY_WvfHYXaVbv6EVV1CBBKNbG";
-            codePush.sync(null, { deploymentKey: key, updateDialog: true, installMode: InstallMode.IMMEDIATE });
+    onBeforeShow: function(tab){        
+        console.log('Tab: '+tab._title+' clicked!');
+        if (tab._title == 'Update'){
+            console.log('Check for app codePush updates');
+            // alert('Check for app codePush updates');
+            jgApp.util.CodePush.checkForUpdate();
+            // var key = "KzmiMD1jgcoaOY_WvfHYXaVbv6EVV1CBBKNbG";
+            // codePush.sync(null, { deploymentKey: key, updateDialog: true, installMode: InstallMode.IMMEDIATE });
+            return false;
         }
-        return false;
+        return true;
+    },
+
+    onGetPhoto: function(){
+        jgApp.util.Camera.getPicture(false, 'MyPhoto');      
+    },
+
+    onTakePhoto: function(){
+        jgApp.util.Camera.getPicture(true, 'MyPhoto');
     },
 
     onItemSelected: function (sender, record) {

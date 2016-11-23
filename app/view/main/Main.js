@@ -21,45 +21,87 @@ Ext.define('JGApp.view.main.Main', {
     viewModel: 'main',
 
     defaults: {
-        tab: {
-            iconAlign: 'top'
+        tab: { 
+            iconAlign: 'top', 
+            listeners: { tap: 'onBeforeShow' }
         },
         styleHtmlContent: true
     },
 
     tabBarPosition: 'bottom',
-
+    
     items: [
         {
-            title: 'JMG2',
+            title  : 'JMG2',
             iconCls: 'x-fa fa-home',
-            layout: 'fit',            
-            // The following grid shares a store with the classic version's grid as well!
-            items: [{
-                xtype: 'mainlist'
-            }]
-        },{
-            title: 'Users',
+            layout : 'fit',                        
+            items  : [{ xtype: 'mainlist' }] // The following grid shares a store with the classic version's grid as well!
+        },
+        {
+            title  : 'Pix',
             iconCls: 'x-fa fa-user',
-            bind: {
-                html: '<div id="divStatus">CURRENT PLACEHOLDER</div><div>{loremIpsum}</div>'
-            }
-        },{
-            title: 'Groups',
+            // bind   : { html: '<div id="divStatus">CURRENT PLACEHOLDER</div><div>{loremIpsum}</div>' }
+            xtype: 'formpanel',
+            items: [
+                {
+                    xtype: 'fieldset',
+                    defaults: { labelWidth: '35%' },
+                    title: 'Information',
+                    items: [
+                        { xtype: 'textfield', label: 'First Name', name: 'firstName' },
+                        { xtype: 'textfield', label: 'Last Name', name: 'lastName' },
+                        { xtype: 'textfield', label: 'Title', name: 'title' }
+                    ]// info items
+                },
+                {
+                    xtype: 'fieldset',
+                    defaults: { labelWidth: '35%' },
+                    title: 'Contact Information',
+                    items: [
+                        { xtype: 'textfield', label: 'Telephone', name: 'telephone' }
+                    ]
+                },
+                // {
+                //     xtype: 'fieldset',
+                //     title: 'Address',
+                //     defaults: { labelWidth: '35%' },
+                //     items: [
+                //         { xtype: 'textfield', label: 'City', name: 'city' },
+                //         { xtype: 'textfield', label: 'State', name: 'state' },
+                //         { xtype: 'textfield', label: 'Country', name: 'country' }
+                //     ]
+                // },
+                {
+                    xtype: 'fieldset',
+                    title: 'Get Photo',
+                    layout: 'hbox',
+                    defaults: { labelWidth: '35%' },
+                    items: [
+                        { xtype: 'button', text: 'Get Photo', handler: 'onGetPhoto' }, 
+                        { xtype: 'spacer', width: '20px' },                      
+                        { xtype: 'button', text: 'Take Photo', handler: 'onTakePhoto' },                        
+                    ]
+                },
+                {
+                    xtype: 'fieldset',
+                    title: 'My Photo',
+                    defaults: { labelWidth: '0%' },
+                    items: [                        
+                        { xtype: 'image', height: '50px', id:'MyPhoto', src: 'http://www.sencha.com/assets/images/sencha-avatar-64x64.png' }
+                    ]
+                }
+            ]
+        },
+        {
+            title  : 'Groups',
             iconCls: 'x-fa fa-users',            
-            bind: {
-                html: '{loremIpsum}'
-            }
-        },{
-            title: 'Update',
-            iconCls: 'x-fa fa-cog',
-            bind: {
-                html: '{loremIpsum}'
-            }
+            bind   : { html: '{loremIpsum}' }
+        },
+        {
+            title  : 'Update',
+            iconCls: 'x-fa fa-cog',            
+            bind   : { html: '{loremIpsum}' },                        
+            // tab    : { listeners: { tap: 'onBeforeShow' } }
         }
     ]
-
-    ,listeners: {
-        tap: 'onBeforeShow'
-    }
 });

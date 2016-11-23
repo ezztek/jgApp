@@ -12,12 +12,20 @@ Ext.define('JGApp.Application', {
         // TODO: add global / shared stores here
     ],
     
+    requires: [
+        'jgApp.util.CodePush',
+        'jgApp.util.Camera'
+    ],
+
     launch: function () {
         // TODO - Launch the application
         var str = "Application - Launch called!";        
         console.log(str);
         //alert(str);
 
+        jgApp.util.CodePush.initialize();
+
+/*
         var app = {
             // Application Constructor
             initialize: function () {
@@ -67,30 +75,10 @@ Ext.define('JGApp.Application', {
         };// app
 
         app.initialize();
-
+*/
         // document.getElementById('get-picture').addEventListener('click', getPicture, false);
         // document.getElementById('take-picture').addEventListener('click', takePicture, false);
-
-        function takePicture(){ getPicture(true); }
-
-        function getPicture(fromCamera){
-            var sType = fromCamera ? Camera.PictureSourceType.Camera : Camera.PictureSourceType.PHOTOLIBRARY;
-            alert("fromCamera: "+fromCamera+", sType: "+sType);   
-            navigator.camera.getPicture(onSuccess, onFail, {
-                quality: 50,    
-                sourceType: fromCamera == true ? Camera.PictureSourceType.Camera : Camera.PictureSourceType.PHOTOLIBRARY,    
-                destinationType: Camera.DestinationType.FILE_URI
-            });
-        }
-
-        function onSuccess(imageURI) {
-            var image = document.getElementById('my-photo');
-            image.src = imageURI;
-        }
-
-        function onFail(message) {
-            alert('Failed because: ' + message);
-        }
+        
 
     },// launch
 

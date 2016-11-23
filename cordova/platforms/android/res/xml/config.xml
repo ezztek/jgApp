@@ -18,6 +18,9 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
     <feature name="Zip">
         <param name="android-package" value="org.apache.cordova.Zip" />
     </feature>
