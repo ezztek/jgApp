@@ -12,18 +12,18 @@ Ext.define('JGApp.Application', {
         // TODO: add global / shared stores here
     ],
     
-    requires: [
-        'jgApp.util.CodePush',
-        'jgApp.util.Camera'
-    ],
+    // requires: [
+    //     'jgApp.util.CodePush'
+    //     ,'jgApp.util.Camera'
+    // ],
 
     launch: function () {
         // TODO - Launch the application
         var str = "Application - Launch called!";        
         console.log(str);
         //alert(str);
-
-        jgApp.util.CodePush.initialize();
+        // document.addEventListener('deviceready', jgApp.util.CodePush.check4Updates.bind(this), false);
+        // jgApp.util.CodePush.initialize();
 
 /*
         var app = {

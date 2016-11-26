@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'JGApp' );
-$image-search-path: 'C:/Users/JMG-Dell/projects/apps/jgApp/build/development/JGApp/resources';
+$image-search-path: 'C:/apps/cordova/JGApp/build/development/JGApp/resources';
 $theme-name:  dynamic( 'theme-neptune' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractmanager: dynamic(true);;
@@ -579,12 +579,12 @@ $include-ext-viewport-wp: dynamic(true);;
 $include-ext-viewport-windowsphone: dynamic(true);;
 $include-jgapp-application: dynamic(true);;
 $include-jgapp-store-personnel: dynamic(true);;
+$include-jgapp-util-camera: dynamic(true);;
+$include-jgapp-util-codepush: dynamic(true);;
 $include-jgapp-view-main-list: dynamic(true);;
 $include-jgapp-view-main-main: dynamic(true);;
 $include-jgapp-view-main-maincontroller: dynamic(true);;
 $include-jgapp-view-main-mainmodel: dynamic(true);;
-$include-jgapp-util-camera: dynamic(true);;
-$include-jgapp-util-codepush: dynamic(true);;
 $output-paths: ("path": "../resources");
 
 /* ======================== ETC ======================== */

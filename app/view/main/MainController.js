@@ -6,36 +6,38 @@
  */
 Ext.define('JGApp.view.main.MainController', {
     extend: 'Ext.app.ViewController',
+    alias : 'controller.main',
 
-    alias: 'controller.main',
-
-    // requires: [
-    //     'jgApp.util.CodePush'
-    // ],
+    requires: [
+        'JGApp.util.CodePush',
+        'JGApp.util.Camera'
+    ],
 
     init: function(){
-    //   jgApp.util.CodePush.initialize();    
+        console.log('MainController.init => Function called');
+        // debugger;
+        // var me = this;
+        // document.addEventListener('deviceready', JGApp.util.CodePush.check4Updates.bind(me), false);
+      JGApp.util.CodePush.initialize();          
     },
 
     onBeforeShow: function(tab){        
         console.log('Tab: '+tab._title+' clicked!');
         if (tab._title == 'Update'){
-            console.log('Check for app codePush updates');
-            // alert('Check for app codePush updates');
-            jgApp.util.CodePush.checkForUpdate();
-            // var key = "KzmiMD1jgcoaOY_WvfHYXaVbv6EVV1CBBKNbG";
-            // codePush.sync(null, { deploymentKey: key, updateDialog: true, installMode: InstallMode.IMMEDIATE });
+            console.log('Check for app codePush updates');            
+            JGApp.util.CodePush.check4Updates();            
             return false;
         }
         return true;
     },
 
+    
     onGetPhoto: function(){
-        jgApp.util.Camera.getPicture(false, 'MyPhoto');      
+        JGApp.util.Camera.getPicture(false, 'MyPhoto');      
     },
 
     onTakePhoto: function(){
-        jgApp.util.Camera.getPicture(true, 'MyPhoto');
+        JGApp.util.Camera.getPicture(true, 'MyPhoto');
     },
 
     onItemSelected: function (sender, record) {
