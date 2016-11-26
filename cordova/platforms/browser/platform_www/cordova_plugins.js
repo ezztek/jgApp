@@ -354,6 +354,20 @@ module.exports = [
         "id": "cordova-plugin-camera.CameraProxy",
         "pluginId": "cordova-plugin-camera",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "pluginId": "cordova-plugin-splashscreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-splashscreen/src/browser/SplashScreenProxy.js",
+        "id": "cordova-plugin-splashscreen.SplashScreenProxy",
+        "pluginId": "cordova-plugin-splashscreen",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -368,7 +382,8 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.3",
     "cordova-plugin-code-push": "1.9.2-beta",
     "cordova-plugin-whitelist": "1.3.0",
-    "cordova-plugin-camera": "2.3.0"
+    "cordova-plugin-camera": "2.3.0",
+    "cordova-plugin-splashscreen": "4.0.0"
 }
 // BOTTOM OF METADATA
 });

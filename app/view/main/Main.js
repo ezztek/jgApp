@@ -23,7 +23,10 @@ Ext.define('JGApp.view.main.Main', {
     defaults: {
         tab: { 
             iconAlign: 'top', 
-            listeners: { tap: 'onBeforeShow' }
+            listeners: { 
+                tap: 'onBeforeShow',
+                afterrender: 'onAfterRender' 
+            }
         },
         styleHtmlContent: true
     },

@@ -15,6 +15,9 @@
         },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.mycdomain.MyApp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.mycdomain.MyApp"
         }
     },
     "dependent_plugins": {

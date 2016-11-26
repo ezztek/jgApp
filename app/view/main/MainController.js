@@ -9,16 +9,18 @@ Ext.define('JGApp.view.main.MainController', {
     alias : 'controller.main',
 
     requires: [
+        'Ext.Toast',
         'JGApp.util.CodePush',
         'JGApp.util.Camera'
     ],
 
     init: function(){
-        console.log('MainController.init => Function called');
-        // debugger;
-        // var me = this;
-        // document.addEventListener('deviceready', JGApp.util.CodePush.check4Updates.bind(me), false);
-      JGApp.util.CodePush.initialize();          
+        console.log('MainController.init => Function called');        
+        JGApp.util.CodePush.initialize();          
+    },
+
+    onAfterRender: function(){
+        navigator.splashscreen.hide();
     },
 
     onBeforeShow: function(tab){        
@@ -30,7 +32,6 @@ Ext.define('JGApp.view.main.MainController', {
         }
         return true;
     },
-
     
     onGetPhoto: function(){
         JGApp.util.Camera.getPicture(false, 'MyPhoto');      
