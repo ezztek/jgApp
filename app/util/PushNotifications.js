@@ -1,5 +1,4 @@
 Ext.define('JGApp.util.PushNotifications', {
-    // var pushNotification;
     singleton: true,    
     cls      : 'JGApp.util.PushNotifications',
     senderID : '731504384124',
@@ -12,23 +11,14 @@ Ext.define('JGApp.util.PushNotifications', {
     },
 
     onDeviceReady: function() {
-        var me = this, push = {};
-        // var log = JGApp.util.DomHelpers.addStatusLI;
+        var push = {};       
         JGApp.util.DomHelpers.addStatusLI(this.cls+' => deviceready event received');
         
         try{
             push = PushNotification.init({
-                android: {
-                    senderID: this.senderID
-                },
-                browser: {
-                    pushServiceURL: 'http://push.api.phonegap.com/v1/push'
-                },
-                ios: {
-                    alert: "true",
-                    badge: "true",
-                    sound: "true"
-                },
+                android: { senderID: this.senderID },
+                browser: { pushServiceURL: 'http://push.api.phonegap.com/v1/push' },
+                ios    : { alert: "true", badge: "true", sound: "true" },
                 windows: {}
             });
             JGApp.util.DomHelpers.addStatusLI(this.cls+' => No errors calling push.init function');
@@ -37,8 +27,10 @@ Ext.define('JGApp.util.PushNotifications', {
             JGApp.util.DomHelpers.addStatusLI(this.cls+' => Error setting up push notifications: '+e);
         }
         
-        push.on('registration', function(data) {
-            // data.registrationId
+        push.hasPermission(function(data) {
+            if (data.isEnabled) { JGApp.util.addStatusLI(this.cls+' => isEnabled'); }
+        });
+        push.on('registration', function(data) {            
             JGApp.util.addStatusLI(this.cls+' => registrationID: '+data.registrationId)
         });
 
@@ -55,7 +47,6 @@ Ext.define('JGApp.util.PushNotifications', {
         push.on('error', function(e) {
             JGApp.util.addStatusLI(this.cls+' => Error: '+ e.message);
         });
-
         
 /*
         document.addEventListener("backbutton", function(e){
