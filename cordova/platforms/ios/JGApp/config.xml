@@ -39,11 +39,11 @@
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="PushPlugin">
-        <param name="ios-package" value="PushPlugin" />
-    </feature>
     <feature name="Media">
         <param name="ios-package" value="CDVSound" />
+    </feature>
+    <feature name="PushNotification">
+        <param name="ios-package" value="PushPlugin" />
     </feature>
     <feature name="Zip">
         <param name="ios-package" value="ZipPlugin" />

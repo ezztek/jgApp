@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "com.phonegap.plugins.PushPlugin": {
-            "PACKAGE_NAME": "com.mycdomain.MyApp"
-        },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.mycdomain.MyApp"
         },
@@ -27,6 +24,13 @@
         },
         "cordova-plugin-media": {
             "PACKAGE_NAME": "com.mycdomain.MyApp"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "731504384124",
+            "PACKAGE_NAME": "com.mycdomain.MyApp"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.mycdomain.MyApp"
         }
     },
     "dependent_plugins": {
@@ -43,9 +47,6 @@
             "PACKAGE_NAME": "com.mycdomain.MyApp"
         },
         "cordova-plugin-zip": {
-            "PACKAGE_NAME": "com.mycdomain.MyApp"
-        },
-        "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "com.mycdomain.MyApp"
         }
     }

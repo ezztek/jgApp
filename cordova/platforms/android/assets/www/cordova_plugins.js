@@ -346,14 +346,6 @@ module.exports = [
         ]
     },
     {
-        "id": "com.phonegap.plugins.PushPlugin.PushNotification",
-        "file": "plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js",
-        "pluginId": "com.phonegap.plugins.PushPlugin",
-        "clobbers": [
-            "PushNotification"
-        ]
-    },
-    {
         "id": "cordova-plugin-media.MediaError",
         "file": "plugins/cordova-plugin-media/www/MediaError.js",
         "pluginId": "cordova-plugin-media",
@@ -367,6 +359,14 @@ module.exports = [
         "pluginId": "cordova-plugin-media",
         "clobbers": [
             "window.Media"
+        ]
+    },
+    {
+        "id": "phonegap-plugin-push.PushNotification",
+        "file": "plugins/phonegap-plugin-push/www/push.js",
+        "pluginId": "phonegap-plugin-push",
+        "clobbers": [
+            "PushNotification"
         ]
     }
 ];
@@ -384,8 +384,8 @@ module.exports.metadata =
     "cordova-plugin-code-push": "1.9.2-beta",
     "cordova-plugin-camera": "2.3.0",
     "cordova-plugin-splashscreen": "4.0.0",
-    "com.phonegap.plugins.PushPlugin": "2.5.0",
-    "cordova-plugin-media": "2.4.0"
+    "cordova-plugin-media": "2.4.0",
+    "phonegap-plugin-push": "1.9.0"
 };
 // BOTTOM OF METADATA
 });

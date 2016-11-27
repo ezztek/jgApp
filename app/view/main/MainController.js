@@ -17,7 +17,8 @@ Ext.define('JGApp.view.main.MainController', {
     ],
 
     init: function(){
-        console.log('MainController.init => Function called');        
+        console.log('MainController.init => Function called');
+        JGApp.util.DomHelpers.init();        
         // JGApp.util.CodePush.initialize();
         // JGApp.util.PushNotifications.initialize();          
     },
