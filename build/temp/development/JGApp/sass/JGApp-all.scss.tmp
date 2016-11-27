@@ -581,6 +581,8 @@ $include-jgapp-application: dynamic(true);;
 $include-jgapp-store-personnel: dynamic(true);;
 $include-jgapp-util-camera: dynamic(true);;
 $include-jgapp-util-codepush: dynamic(true);;
+$include-jgapp-util-domhelpers: dynamic(true);;
+$include-jgapp-util-pushnotifications: dynamic(true);;
 $include-jgapp-view-main-list: dynamic(true);;
 $include-jgapp-view-main-main: dynamic(true);;
 $include-jgapp-view-main-maincontroller: dynamic(true);;

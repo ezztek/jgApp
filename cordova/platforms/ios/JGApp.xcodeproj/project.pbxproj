@@ -57,6 +57,9 @@
 		5B8DBC6262634830AB86AB24 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9534E704A4D1468E93D37689 /* Utilities.m */; };
 		0E5DBA1C78CD4838A184CBDD /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF5110B917042D2B8894538 /* CDVSplashScreen.m */; };
 		7BC16DF28F4748DAB01B2EED /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA0E37D7FBC4257A47BD3D5 /* CDVViewController+SplashScreen.m */; };
+		1486E656CDD14239AC6DB883 /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B7AF5F20E24E2B8F55669F /* AppDelegate+notification.m */; };
+		CB73938FE00F4DD198C6F3C1 /* PushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D15C0B12F73A4064B0F8DF82 /* PushPlugin.m */; };
+		C51743C3FFCD4B43BC18E140 /* CDVSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 97104A4D6BBA493C874C3039 /* CDVSound.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +182,12 @@
 		1CA0E37D7FBC4257A47BD3D5 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		FD80395C8EA34BC8BAE14385 /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		95DAEE0370C34AA48CD6D421 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B2B7AF5F20E24E2B8F55669F /* AppDelegate+notification.m */ = {isa = PBXFileReference; name = "AppDelegate+notification.m"; path = "com.phonegap.plugins.PushPlugin/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D15C0B12F73A4064B0F8DF82 /* PushPlugin.m */ = {isa = PBXFileReference; name = "PushPlugin.m"; path = "com.phonegap.plugins.PushPlugin/PushPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		8A31AD9799784EE09BF9133D /* AppDelegate+notification.h */ = {isa = PBXFileReference; name = "AppDelegate+notification.h"; path = "com.phonegap.plugins.PushPlugin/AppDelegate+notification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E99C255AE3B14B4CB4B2C069 /* PushPlugin.h */ = {isa = PBXFileReference; name = "PushPlugin.h"; path = "com.phonegap.plugins.PushPlugin/PushPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		97104A4D6BBA493C874C3039 /* CDVSound.m */ = {isa = PBXFileReference; name = "CDVSound.m"; path = "cordova-plugin-media/CDVSound.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		238C0C289E8B49BB875D253E /* CDVSound.h */ = {isa = PBXFileReference; name = "CDVSound.h"; path = "cordova-plugin-media/CDVSound.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +378,12 @@
 				1CA0E37D7FBC4257A47BD3D5 /* CDVViewController+SplashScreen.m */,
 				FD80395C8EA34BC8BAE14385 /* CDVSplashScreen.h */,
 				95DAEE0370C34AA48CD6D421 /* CDVViewController+SplashScreen.h */,
+				B2B7AF5F20E24E2B8F55669F /* AppDelegate+notification.m */,
+				D15C0B12F73A4064B0F8DF82 /* PushPlugin.m */,
+				8A31AD9799784EE09BF9133D /* AppDelegate+notification.h */,
+				E99C255AE3B14B4CB4B2C069 /* PushPlugin.h */,
+				97104A4D6BBA493C874C3039 /* CDVSound.m */,
+				238C0C289E8B49BB875D253E /* CDVSound.h */,
 			);
 			name = Plugins;
 			path = "JGApp/Plugins";
@@ -517,6 +532,9 @@
 				5B8DBC6262634830AB86AB24 /* Utilities.m in Sources */,
 				0E5DBA1C78CD4838A184CBDD /* CDVSplashScreen.m in Sources */,
 				7BC16DF28F4748DAB01B2EED /* CDVViewController+SplashScreen.m in Sources */,
+				1486E656CDD14239AC6DB883 /* AppDelegate+notification.m in Sources */,
+				CB73938FE00F4DD198C6F3C1 /* PushPlugin.m in Sources */,
+				C51743C3FFCD4B43BC18E140 /* CDVSound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

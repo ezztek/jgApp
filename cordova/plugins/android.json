@@ -18,6 +18,15 @@
         },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.mycdomain.MyApp"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "com.mycdomain.MyApp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.mycdomain.MyApp"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.mycdomain.MyApp"
         }
     },
     "dependent_plugins": {
@@ -37,9 +46,6 @@
             "PACKAGE_NAME": "com.mycdomain.MyApp"
         },
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.mycdomain.MyApp"
-        },
-        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.mycdomain.MyApp"
         }
     }

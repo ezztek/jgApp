@@ -21,6 +21,9 @@ Ext.define('JGApp.Application', {
         // TODO - Launch the application
         var str = "Application - Launch called!";        
         console.log(str);
+        JGApp.util.CodePush.initialize();
+        JGApp.util.PushNotifications.initialize();
+        navigator.splashscreen.hide();
         //alert(str);
         // document.addEventListener('deviceready', jgApp.util.CodePush.check4Updates.bind(this), false);
         // jgApp.util.CodePush.initialize();

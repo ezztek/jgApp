@@ -17,10 +17,10 @@ Ext.define('JGApp.util.CodePush', {
         // this.receivedEvent('deviceready');
         // codePush.sync(null, { updateDialog: true, installMode: InstallMode.IMMEDIATE });                
         codePush.sync(null, { deploymentKey: this.deploymentKeyStaging, updateDialog: true, installMode: InstallMode.IMMEDIATE });
-        Ext.toast('Checking for updated completed');
+        Ext.toast('Checking for updates completed');
         var msg = this.cls+" => Staging key: "+this.deploymentKeyStaging+", Prod: "+this.deploymentKeyPROD;
         console.log(msg);
-        try{ document.getElementById("divStatus").innerHTML=msg; }
+        try{ JGApp.util.DomHelpers.addStatusLI(msg); }
         catch(e){ console.log('Error: '+e)}; 
         // alert(msg);                                        
     },

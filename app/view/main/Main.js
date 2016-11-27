@@ -24,8 +24,7 @@ Ext.define('JGApp.view.main.Main', {
         tab: { 
             iconAlign: 'top', 
             listeners: { 
-                tap: 'onBeforeShow',
-                afterrender: 'onAfterRender' 
+                tap: 'onBeforeShow' 
             }
         },
         styleHtmlContent: true
@@ -33,7 +32,21 @@ Ext.define('JGApp.view.main.Main', {
 
     tabBarPosition: 'bottom',
     
+    // listeners: { afterrender: 'onAfterRender' },
+
     items: [
+        {
+            title  : 'Status',
+            iconCls: 'x-fa fa-users',     
+            html   : '<div id="home">'+
+                     '  <div id="app-status-div">'+
+                     '      <ul id="app-status-ul">'+
+                     '         <li>Cordova PushNotification Plugin Demo</li>'+
+                     '      </ul>'+
+                     '  </div>'+
+                     '</div>'       
+            // ,bind   : { html: '{loremIpsum}' }
+        },
         {
             title  : 'JMG2',
             iconCls: 'x-fa fa-home',
@@ -89,17 +102,13 @@ Ext.define('JGApp.view.main.Main', {
                     xtype: 'fieldset',
                     title: 'My Photo',
                     defaults: { labelWidth: '0%' },
-                    items: [                        
-                        { xtype: 'image', height: '50px', id:'MyPhoto', src: 'http://www.sencha.com/assets/images/sencha-avatar-64x64.png' }
+                    items: [    
+                        { html: '<img id="MyPhoto" height="50px" width="300" />' }                    
+                        // { xtype: 'image', height: '50px', id:'MyPhoto', src: 'http://www.sencha.com/assets/images/sencha-avatar-64x64.png' }
                     ]
                 }
             ]
-        },
-        {
-            title  : 'Groups',
-            iconCls: 'x-fa fa-users',            
-            bind   : { html: '{loremIpsum}' }
-        },
+        },        
         {
             title  : 'Update',
             iconCls: 'x-fa fa-cog',            

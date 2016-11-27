@@ -10,16 +10,22 @@ Ext.define('JGApp.view.main.MainController', {
 
     requires: [
         'Ext.Toast',
+        'JGApp.util.DomHelpers',
         'JGApp.util.CodePush',
-        'JGApp.util.Camera'
+        'JGApp.util.Camera',
+        'JGApp.util.PushNotifications'
     ],
 
     init: function(){
         console.log('MainController.init => Function called');        
-        JGApp.util.CodePush.initialize();          
+        // JGApp.util.CodePush.initialize();
+        // JGApp.util.PushNotifications.initialize();          
     },
 
     onAfterRender: function(){
+        console.log('MainController.onAfterRender => Function called');
+        JGApp.util.CodePush.initialize();
+        JGApp.util.PushNotifications.initialize();
         navigator.splashscreen.hide();
     },
 

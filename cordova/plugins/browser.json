@@ -7,16 +7,25 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-code-push": {
-            "PACKAGE_NAME": "com.mycdomain.MyApp"
-        },
-        "cordova-plugin-whitelist": {
+        "com.phonegap.plugins.PushPlugin": {
             "PACKAGE_NAME": "com.mycdomain.MyApp"
         },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.mycdomain.MyApp"
         },
+        "cordova-plugin-code-push": {
+            "PACKAGE_NAME": "com.mycdomain.MyApp"
+        },
         "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.mycdomain.MyApp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.mycdomain.MyApp"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.mycdomain.MyApp"
+        },
+        "cordova-plugin-media": {
             "PACKAGE_NAME": "com.mycdomain.MyApp"
         }
     },
@@ -37,9 +46,6 @@
             "PACKAGE_NAME": "com.mycdomain.MyApp"
         },
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.mycdomain.MyApp"
-        },
-        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.mycdomain.MyApp"
         }
     }
